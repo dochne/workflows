@@ -1,0 +1,15 @@
+name: 'lichtenstein'
+description: 'Resets a git repository to the first commit, commits lots of '
+inputs: 
+  # Instantiate with github-token: ${{ secrets.GITHUB_TOKEN }}
+  github-token:
+    description: 'GitHub token'
+    required: true
+
+  pattern:
+    description: 'The name of the expected author'
+    required: true
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
